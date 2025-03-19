@@ -275,7 +275,7 @@ body {
     margin-bottom: 20px;
 }
 
-label {
+.form-label{
     display: block;
     margin-bottom: 8px;
     font-size: 14px;
@@ -316,6 +316,12 @@ label {
 
 .checkbox-container input {
     margin-right: 10px;
+}
+
+.term-conditions-label{
+    display: block;
+    font-size: 14px;
+    color: #555;
 }
 
 .forgot-password {
