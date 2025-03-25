@@ -1,3 +1,5 @@
+document.getElementById("left-section-search-button").disabled = true;
+
 document.getElementById('signupForm').addEventListener('submit', function(e) {
     e.preventDefault();
     

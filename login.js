@@ -10,4 +10,6 @@ document.getElementById('loginForm').addEventListener('submit', function(e) {
     
     // Show a success message
     alert('Login successful!');
-}); 
+});
+
+document.getElementById("left-section-search-button").disabled = true;
