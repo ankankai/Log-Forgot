@@ -1,111 +1,302 @@
 <!DOCTYPE html>
-<html lang="en"> 
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="login.css">
+    <title>CareerConnect</title>
+    <link rel="icon" href="icon/comp-logo.svg" type="image/icon type">
+    <link rel="stylesheet" href="home.css">
 </head>
+
 <body>
-    <div class="login-container">
-        <div class="left-panel">
-            <div class="header-text">
-                <h1>Find your dream<br>Job in CareerConnect</h1>
-            </div>
-            
-            <div class="job-search-illustration">
-                <div class="search-card">
-                    <div class="search-input">
-                        <input type="text" placeholder="search" id="left-section-search-button">
-                        <button>➜</button>
-                    </div>
-                    <div class="search-line"></div>
-                    <div class="search-line short-line"></div>
+    <!-- Page Navigation for Demo -->
+    <!-- <div class="page-links">
+        <p>Navigate to Pages:</p>
+        <a href="#" class="active">Home</a>
+        <a href="#" onclick="showLoginPage()">Login</a>
+        <a href="#" onclick="showSignupPage()">Sign Up</a>
+        <a href="#" onclick="showDashboardPage()">Dashboard</a>
+        <a href="#" onclick="showJobsPage()">Jobs</a>
+        <a href="#" onclick="showAboutPage()">About</a>
+        <a href="#" onclick="showContactPage()">Contact Us</a>
+    </div> -->
+
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo-text-container">
+                    <img src="icon/comp-logo.svg" alt="Logo" class="logo">
+                    <a href="home.html" class="logo-text">CareerConnect</a>
                 </div>
-                
-                <div class="job-card">
-                    <div class="card-icon" style="background-color: #f5a623;"></div>
-                    <div class="card-line"></div>
-                    <div class="card-line short-line"></div>
+
+                <div class="nav-links">
+                    <a href="home.html">Home</a>
+                    <a href="#">Find Jobs</a>
+                    <a href="#">For Employers</a>
+                    <a href="#">About</a>
+                    <a href="#">Contact</a>
                 </div>
-                
-                <div class="job-card">
-                    <div class="card-icon" style="background-color: #7ed321;"></div>
-                    <div class="card-line"></div>
-                    <div class="card-line short-line"></div>
+                <div class="nav-buttons">
+                    <a href="#" class="btn btn-outline">Log In</a>
+                    <a href="#" class="btn btn-primary">Sign Up</a>
                 </div>
-                
-                <div class="job-card">
-                    <div class="card-icon" style="background-color: #4a90e2;"></div>
-                    <div class="card-line"></div>
-                    <div class="card-line short-line"></div>
+                <div class="hamburger" id="hamburger-menu">
+                    <div></div>
+                    <div></div>
+                    <div></div>
                 </div>
-                
-            </div>
-            
-            <!-- <div class="pagination">
-                <div class="pagination-dot"></div>
-                <div class="pagination-dot active"></div>
-                <div class="pagination-dot"></div>
-            </div> -->
+            </nav>
         </div>
-        
-        <div class="right-panel">
-            <div class="account-header">
-                <div class="logo-container">
-                    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBzdHlsZT0iZmlsbDojMGM1NTk4Ij48cGF0aCBkPSJNMTIgMTIuMjVjMi42OSAwIDQuODctMi4xOCA0Ljg3LTQuODdzLTIuMTgtNC44Ny00Ljg3LTQuODctNC44NyAyLjE4LTQuODcgNC44NyAyLjE4IDQuODcgNC44NyA0Ljg3em0wLTcuNzVjMS41OCAwIDIuODcgMS4yOSAyLjg3IDIuODdzLTEuMjkgMi44Ny0yLjg3IDIuODctMi44Ny0xLjI5LTIuODctMi44NyAxLjI5LTIuODcgMi44Ny0yLjg3eiIvPjxwYXRoIGQ9Im0yMCAyMS4yNS0uODYtNC4yNGMtLjE2LS44My0uNzUtMS41Mi0xLjUzLTEuODFMMTQgMTRoLTRsLTMuNjEgMS4yYy0uNzguMjktMS4zNy45OC0xLjUzIDEuODFsLS44NiA0LjI0aDMuNzVsMS4wNC0zLjExaC40MmwxLjA0IDMuMTFoMy43NWwxLjA0LTMuMTFoLjQybDEuMDQgMy4xMUgyMHptLTUuODctNS4yNUwxMy4wNCAxOS4yNWgtMS4wOGwtMS4wNC0zLjExaDEuMDRsMS4yMS0uMTR6bS00LjA4IDAgMS4xNy0uMzlsMS4wNCAzLjExaC0zLjRsLTEuMDQtMy4xMWgxLjA0bDEuMTkuMzl6Ii8+PC9zdmc+" alt="Logo" class="logo">
-                    <span class="logo-text">CareerConnect</span>
-                </div>
-                
-                <div class="header-sign-up-container">
-                    <span>Don't have an account?</span>
-                    <a href="signup.html">Sign up</a>
-                </div>
-                
-            </div>
-            
-            <div class="login-form">
-                <h2>Login to CareerConnect</h2>
-                <p>Now you can apply for your dream job</p>
-                
-                <!-- <div class="social-login">
-                    <button class="social-btn google">
-                        <img src="https://fonts.gstatic.com/s/i/productlogos/googleg/v6/24px.svg" alt="Google">
-                        With Google
-                    </button>
-                </div> -->
-                
-                <div class="divider">
-                    <div class="divider-line"></div>
-                    <span class="divider-text">OR</span>
-                    <div class="divider-line"></div>
-                </div>
-                
-                <form id="loginForm">
-                    <div class="form-group">
-                        <label for="username">Username/email</label>
-                        <input type="text" id="username" name="username">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="password">Password</label>
-                        <input type="password" id="password" name="password">
-                    </div>
-                    
-                    <div class="form-footer">
-                        <div class="remember-me">
-                            <input type="checkbox" id="remember" name="remember">
-                            <label for="remember">Remember me</label>
-                        </div>
-                        <a href="forgot-password-page.html" class="forgot-password">Forgot password?</a>
-                    </div>
-                    
-                    <button type="submit" class="login-btn">Login</button>
-                </form>
-            </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <a href="#">Home</a>
+        <a href="#">Find Jobs</a>
+        <a href="#">For Employers</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+        <div class="nav-buttons">
+            <a href="#" class="btn btn-outline">Log In</a>
+            <a href="#" class="btn btn-primary">Sign Up</a>
         </div>
     </div>
 
-    <script src="login.js"></script>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Find Your Dream Job Today</h1>
+            <p>Connect with thousands of employers and discover opportunities that match your skills and career goals.
+            </p>
+            <div class="search-box">
+                <input type="text" placeholder="Job title, keywords, or company">
+                <button>Search Jobs</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why Choose CareerConnect?</h2>
+                <p>We connect talented individuals with great companies to create meaningful career opportunities.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <img alt="search" src="icon/search.png">
+                    </div>
+                    <h3>Smart Job Matching</h3>
+                    <p>Our AI-powered system matches your skills and preferences with the perfect job opportunities.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <img alt="application" src="icon/application.png">
+                    </div>
+                    <h3>Easy Application</h3>
+                    <p>Apply to multiple jobs with just a few clicks using your saved profile and resume.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <img alt="linked-people" src="icon/linked-people.png">
+                    </div>
+                    <h3>Connect with Employers</h3>
+                    <p>Direct communication with hiring managers helps you stand out from other candidates.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Job Categories Section -->
+    <section class="job-categories">
+        <div class="container">
+            <div class="section-title">
+                <h2>Popular Job Categories</h2>
+                <p>Explore opportunities across various industries and find the perfect role for your career.</p>
+            </div>
+            <div class="categories-grid">
+                <div class="category-card">
+                    <img src="icon/technology.png" alt="Technology">
+                    <h3>Technology</h3>
+                    <p>1,245 Jobs Available</p>
+                </div>
+                <div class="category-card">
+                    <img src="icon/healthcare.png" alt="Healthcare">
+                    <h3>Healthcare</h3>
+                    <p>876 Jobs Available</p>
+                </div>
+                <div class="category-card">
+                    <img src="icon/marketing.png" alt="Marketing">
+                    <h3>Marketing</h3>
+                    <p>642 Jobs Available</p>
+                </div>
+                <div class="category-card">
+                    <img src="icon/finance.png" alt="Finance">
+                    <h3>Finance</h3>
+                    <p>523 Jobs Available</p>
+                </div>
+                <div class="category-card">
+                    <img src="icon/education.png" alt="Education">
+                    <h3>Education</h3>
+                    <p>421 Jobs Available</p>
+                </div>
+                <div class="category-card">
+                    <img src="icon/design.png" alt="Design">
+                    <h3>Design</h3>
+                    <p>352 Jobs Available</p>
+                </div>
+                <div class="category-card">
+                    <img src="icon/hospitality.png" alt="Hospitality">
+                    <h3>Hospitality</h3>
+                    <p>298 Jobs Available</p>
+                </div>
+                <div class="category-card">
+                    <img src="icon/engineering.png" alt="Engineering">
+                    <h3>Engineering</h3>
+                    <p>587 Jobs Available</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works">
+        <div class="container">
+            <div class="section-title">
+                <h2>How CareerConnect Works</h2>
+                <p>Our simple process helps job seekers find their dream positions and employers discover top talent.
+                </p>
+            </div>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Create Your Profile</h3>
+                    <p>Sign up and create your professional profile with your skills, experience, and preferences.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Discover Opportunities</h3>
+                    <p>Browse job listings or receive personalized recommendations based on your profile.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Apply & Connect</h3>
+                    <p>Apply to positions with ease and connect directly with hiring managers and recruiters.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>Success Stories</h2>
+                <p>Hear from users who found their dream jobs and employers who discovered amazing talent.</p>
+            </div>
+            <div class="testimonials-container">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"CareerConnect helped me land my dream job at a tech company within two
+                        weeks of creating my profile. The matching system is incredibly accurate!"</p>
+                    <div class="testimonial-author">
+                        <img src="icon/user.png" alt="Author" class="author-img">
+                        <div class="author-info">
+                            <h4>Sarah Johnson</h4>
+                            <p>Software Developer</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"As a recruiter, I've found exceptional candidates through
+                        CareerConnect. The platform's filtering tools save me hours of screening time."</p>
+                    <div class="testimonial-author">
+                        <img src="icon/user.png" alt="Author" class="author-img">
+                        <div class="author-info">
+                            <h4>Michael Chen</h4>
+                            <p>HR Director</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"After graduating, I was worried about finding my first job.
+                        CareerConnect made it easy to find entry-level positions that matched my qualifications."</p>
+                    <div class="testimonial-author">
+                        <img src="icon/user.png" alt="Author" class="author-img">
+                        <div class="author-info">
+                            <h4>Priya Patel</h4>
+                            <p>Marketing Associate</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to Take the Next Step in Your Career?</h2>
+            <p>Join thousands of professionals who have found their dream jobs through CareerConnect.</p>
+            <div class="cta-buttons">
+                <a href="#" class="btn btn-secondary">For Job Seekers</a>
+                <a href="#" class="btn btn-outline">For Employers</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>CareerConnect</h3>
+                    <p>Connecting talent with opportunity through innovative job matching technology.</p>
+                    <div class="social-links">
+                        <a href="#"><span><img class="footer-social-logo" src="icon/facebook.png"
+                                    alt="facebook"></span></a>
+                        <a href="#"><span><img class="footer-social-logo" src="icon/twitter.png"
+                                    alt="twitter"></span></a>
+                        <a href="#"><span><img class="footer-social-logo" src="icon/insta.png"
+                                    alt="instagram"></span></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>For Job Seekers</h3>
+                    <ul>
+                        <li><a href="#">Browse Jobs</a></li>
+                        <li><a href="#">Career Resources</a></li>
+                        <li><a href="#">Resume Builder</a></li>
+                        <li><a href="#">Salary Calculator</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>For Employers</h3>
+                    <ul>
+                        <li><a href="#">Post a Job</a></li>
+                        <li><a href="#">Browse Candidates</a></li>
+                        <li><a href="#">Recruiting Solutions</a></li>
+                        <li><a href="#">Pricing Plans</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 CareerConnect. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="home.js"></script>
 </body>
+
 </html>
