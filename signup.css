@@ -305,6 +305,25 @@ body {
     display: none;
 }
 
+.user-type-selector{
+    display:flex;
+    flex-direction:row;
+    justify-content: space-around;
+    margin-bottom:20px;
+}
+
+.radio-label-continer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.user-label{
+    color: #555;
+    font-size: 16px;
+    margin-left: 5px;
+}
+
 .checkbox-container {
     display: flex;
     align-items: center;
